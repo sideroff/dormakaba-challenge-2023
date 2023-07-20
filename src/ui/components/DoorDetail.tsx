@@ -2,6 +2,7 @@ import Typography from '@mui/material/Typography';
 import { Door } from '@/models/Door';
 import { DetailPageContainer } from '@/ui/layout/DetailPageContainer';
 import { DetailPageItem } from '@/ui/layout/DetailPageItem';
+import ConnectionStatusLabel from './ConnectionStatusLabel';
 
 interface DoorDetailProps {
   door: Door;
@@ -23,7 +24,7 @@ export function DoorDetail({ door }: DoorDetailProps) {
         <Typography>{door.connectionType}</Typography>
       </DetailPageItem>
       <DetailPageItem label="Connection status">
-        <Typography color="success.main">online</Typography>
+        <ConnectionStatusLabel connectionStatus={door.connectionStatus} />
       </DetailPageItem>
     </DetailPageContainer>
   );
