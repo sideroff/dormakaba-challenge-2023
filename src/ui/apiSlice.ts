@@ -11,14 +11,10 @@ export const apiSlice = createApi({
         url: '/doors',
         method: 'GET',
       }),
-      providesTags: (response) => {
-
-        console.log("got response", response);
-
-        return Array.isArray(response)
+      providesTags: (response) =>
+        Array.isArray(response)
           ? response.map(({ id }) => ({ type: 'doors', id }))
-          : [];
-      }
+          : [],
     }),
     getDoorById: builder.query<Door, string>({
       query: (id) => ({
