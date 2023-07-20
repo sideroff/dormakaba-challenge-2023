@@ -1,10 +1,12 @@
 import { DateTime, Settings } from 'luxon';
 import { getLocaleString, getDateTimeByJSDateOrISO } from './dateTime';
 
-Settings.defaultZone = 'Europe/Zurich';
-Settings.defaultLocale = 'de';
-
 describe('dateTime', () => {
+  beforeAll(() => {
+    Settings.defaultZone = 'Europe/Zurich';
+    Settings.defaultLocale = 'de';
+  });
+
   describe('getDateTimeByJSDateOrISO', () => {
     it('returns a luxon DateTime when a string is passed', () => {
       const result = getDateTimeByJSDateOrISO('2000-01-01');
@@ -30,24 +32,24 @@ describe('dateTime', () => {
     });
 
     it('should handle Date object and return formatted short time string', () => {
-      const date = new Date('2023-02-12T14:30:20.124');
+      const date = new Date('2023-02-12T14:30:20.124Z');
       const formattedDate = getLocaleString(date, DateTime.TIME_SIMPLE);
 
-      expect(formattedDate).toEqual('14:30');
+      expect(formattedDate).toEqual('15:30');
     });
 
     it('should handle Date object and return formatted short date and time string', () => {
-      const date = new Date('2023-02-12T14:30:20.124');
+      const date = new Date('2023-02-12T14:30:20.124Z');
       const formattedDate = getLocaleString(date, DateTime.DATETIME_SHORT);
 
-      expect(formattedDate).toEqual('12.2.2023, 14:30');
+      expect(formattedDate).toEqual('12.2.2023, 15:30');
     });
 
     it('should handle Date object and return formatted short date and time string by default', () => {
-      const date = new Date('2023-02-12T14:30:20.124');
+      const date = new Date('2023-02-12T14:30:20.124Z');
       const formattedDate = getLocaleString(date);
 
-      expect(formattedDate).toEqual('12.2.2023, 14:30');
+      expect(formattedDate).toEqual('12.2.2023, 15:30');
     });
 
     it('should handle ISO string and return formatted short date and time string', () => {
