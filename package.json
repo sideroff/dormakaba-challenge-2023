@@ -10,7 +10,8 @@
     "test": "jest --watch",
     "test:ci": "jest --ci",
     "format:write": "prettier --write --ignore-unknown .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "tsc": "tsc"
   },
   "engines": {
     "node": ">=16.13.0"
