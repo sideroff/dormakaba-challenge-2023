@@ -14,10 +14,12 @@ export default function DoorDetailPage() {
     skip: !isPageQueryParamString(doorId),
   });
 
+  const title = `Door detail: ${door?.name}`;
+
   return (
     <>
       <Head>
-        <title>Door detail: {door?.name}</title>
+        <title>{title}</title>
         <meta name="description" content={`door ${door?.name} detail`} />
       </Head>
       <Layout title={door?.name}>
