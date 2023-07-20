@@ -77,9 +77,9 @@ exports[`DoorDetail should render correctly 1`] = `
       </strong>
     </p>
     <p
-      class="MuiTypography-root MuiTypography-body1 css-18todbp-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1oykq5t-MuiTypography-root"
     >
-      online
+      offline
     </p>
   </div>
 </div>
