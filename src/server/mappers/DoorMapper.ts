@@ -5,8 +5,8 @@ import { DoorDto } from '@/__mocks__/dtos/DoorDto';
 import { BuildingDto } from '@/__mocks__/dtos/BuidlingDto';
 import { ApartmentDto } from '@/__mocks__/dtos/ApartmentDto';
 
-type BuildingDtosById = Record<string, BuildingDto>;
-type ApartmentDtosById = Record<string, ApartmentDto>;
+export type BuildingDtosById = Record<string, BuildingDto>;
+export type ApartmentDtosById = Record<string, ApartmentDto>;
 
 @injectable()
 export class DoorMapper implements EntityMapper<Door, DoorDto> {
