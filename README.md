@@ -1,6 +1,6 @@
 # dormakaba coding challenge
 
-The challenge contains a door list and detail page. The applicants are asked to implement new use cases and fix some bugs based on the handout, which is provided together with the challenge itself.
+The challenge contains a door list and detail page. The applicants are asked to implement new use cases and fix some bugs based on the web-frontend-developer-challenge.pdf file in this repository.
 
 ## Getting Started
 
