@@ -12,7 +12,6 @@ exports[`AppBarLogo should render correctly 1`] = `
       data-nimg="1"
       decoding="async"
       height="30"
-      loading="lazy"
       src="/_next/image?url=%2Flogo.png&w=640&q=75"
       srcset="/_next/image?url=%2Flogo.png&w=384&q=75 1x, /_next/image?url=%2Flogo.png&w=640&q=75 2x"
       style="color: transparent;"
